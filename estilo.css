@@ -1,0 +1,19 @@
+
+
+html, body{
+	/*height: 100%;*/
+	margin: 0;
+	background-color: black;
+}
+
+.container{
+	margin-top: 50px;
+}
+
+h1{
+	font-family: 'Nunito', sans-serif;
+	font-size: 3.5em;
+}
+p{
+	font-size: 1.8em
+}
