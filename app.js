@@ -16,8 +16,8 @@ function iniciar(e) {
 
 e.preventDefault();
 
-let str1 = palabra1.value;
-let str2 = palabra2.value;
+let str1 = palabra1.value.toLowerCase();
+let str2 = palabra2.value.toLowerCase();
 
 let p1 = Array.from(str1);
 let p2 = Array.from(str2);
