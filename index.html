@@ -1,41 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link href="https://fonts.googleapis.com/css?family=Nunito:b&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="estilo.css">
-	<title>Anagrama</title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<link rel="stylesheet" href="estilo.css">
+
+<title>A N A G R A M A</title>
 </head>
 <body>
-	<div class="container bg-dark">
 
-		<h1 class="text-white text-center">A·N·A·G·R·A·M·A</h2> <br>
-		<p class="text-white text-center">Ingrese dos palabras para saber si son anagramas</p> <br>
+  <div class="container bg-dark">
 
-		<form id="task">
-		  <div class="row">
-		    <div class="col">
-		      <input type="text" class="form-control palabra1" placeholder="Primera palabra">
-		    </div>
-		    <div class="col">
-		      <input type="text" class="form-control palabra2" placeholder="Segunda palabra">
-		    </div>
-		  </div>
-		  <br>
-		  <div class="col text-center">
-		  	<input class="btn btn-primary btn-lg text-center" type="submit" value="Verificar">
-		  </div>
-		</form>
-	
-		<div>
-      		<h2 class="text-center text-white msj"></h2>
-    	</div>
-			<br>
-		</div>
+    <h1 class="text-white text-center">A·N·A·G·R·A·M·A</h2> <br>
+    <p class="text-white text-center">Ingrese dos palabras para saber si son anagramas</p> <br>
 
-	</div>
+    <form id="task">
+      <div class="inputs">
+          <input type="text" class="form-control palabra1" placeholder="Primera palabra">
+          <input type="text" class="form-control palabra2" placeholder="Segunda palabra">
+      </div>
 
-	<script src="app.js"></script>
+      <br>
+      
+      <div class="col text-center">
+        <input class="btn btn-primary btn-lg text-center" type="submit" value="Verificar">
+      </div>
+    </form>
+
+    <br>
+
+    <div>
+      <h4 class="text-center text-white msj"></h4>
+    </div>
+
+    <br>
+
+  </div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<script src="app.js"></script>
+
 </body>
 </html>
