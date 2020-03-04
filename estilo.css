@@ -56,17 +56,15 @@ html, body
 
 @media (max-width: 600px) {
 
-
 	html, body
 	{
-		height: auto;
-		margin: 0;
-		background-color: darkgrey;
+		background-color:  #343a40;
 	}
+
 
 	.container
 	{
-		height: 100vh;
+		height: 70vh;
 		margin: 0;
 	}
 
