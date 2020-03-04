@@ -56,10 +56,18 @@ html, body
 
 @media (max-width: 600px) {
 
+
+	html, body
+	{
+		height: auto;
+		margin: 0;
+		background-color: darkgrey;
+	}
+
 	.container
 	{
-		margin: 0;
 		height: 100vh;
+		margin: 0;
 	}
 
 	.titulo
