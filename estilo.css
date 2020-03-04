@@ -1,25 +1,41 @@
 
 html, body
 {
-	height: 100vh;
+	height: 80vh;
 	margin: 0;
 	background-color: black;
 }
 
 .container
 {
+	margin-top: 4em;
 	max-width: 1000px;
 }
 
-h1
+.titulo
 {
 	font-family: 'Nunito', sans-serif;
 	font-size: 3.5em;
 }
 
-p
+.texto, .msj
 {
 	font-size: 1.8em
+}
+
+.mensajeRojo
+{
+	color: #f5655b;
+}
+
+.mensajeVerde
+{
+	color: #7ff09d;
+}
+
+.mensajeLila
+{
+	color: #a566e3;
 }
 
 .inputs
@@ -39,6 +55,23 @@ p
 }
 
 @media (max-width: 600px) {
+
+	.container
+	{
+		margin: 0;
+		height: 100vh;
+	}
+
+	.titulo
+	{
+		font-size: 2.5em;
+	}
+
+	.texto, .msj
+	{
+		font-size: 1.2em;
+	}
+
 	.inputs
 	{
 		display: block;

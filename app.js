@@ -4,23 +4,37 @@ let palabra1 = document.querySelector('.palabra1');
 let palabra2 = document.querySelector('.palabra2');
 const boton = document.querySelector('#task');
 const mensaje = document.querySelector('.msj');
+const btn = document.querySelector('button');
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 
 
 /*+++++++++++++FUNCIONALIDAD DEL PROGRAMA+++++++++++++*/
 
+//funcionalidad para limpiar los inputs en caso de refresh (si no, no lo hacía).
+window.onload = limpiarInputs();
+
 //Cada submit del botón 'verificar' inicia la función principal.
 boton.addEventListener('submit', iniciar);
 
 //Función que borra del input las palabras ingresadas.
-function limpiar(){
+function limpiarInputs(){
 	palabra1.value = "";
 	palabra2.value = "";
 }
 
 //Función que después de 2,5 segundos borra el mensaje de resultados.
 function limpiarMensaje(){
-	mensaje.innerText = "";
+	mensaje.classList = "text-center msj";
+	btn.disabled = false;
+	mensaje.innerHTML = '&nbsp'; //Para agregar un espacio en blanco (entidad HTML), se debe usar innerHTML y no innerText
+}
+
+//Función que muestra un mensaje en pantalla, recibe una clase para el color del texto y un string con el texto.
+function mostrarMensaje(colorClase, texto){
+	btn.disabled = true;
+	mensaje.classList.add(colorClase);
+	mensaje.innerText = texto;
+	setTimeout(limpiarMensaje, 2500);
 }
 
 //Función que chequea si dos palabras son o no un anagrama.
@@ -52,29 +66,25 @@ function iniciar(e){
 	p2.sort();
 	
 	//Primero chequeo que se hayan ingresado dos palabras y no haya uno o dos campos vacíos.
+	//En cada caso, se llama a la función de mostrar el resultado, y un timeout para borrarlo.
 	if(p1.length == 0 || p2.length == 0){
-		mensaje.innerText = "Se deben ingresar dos palabras";
-		setTimeout(limpiarMensaje, 2500);
+		mostrarMensaje('mensajeLila', 'Se deben ingresar dos palabras');
 	} else {
 		//Luego chequeo que tengan la misma cantidad de letras, sino se muestra el mensaje del 'else'.
 		if(p1.length === p2.length){
 			//La función 'anagrama()' retorna un boolean.
 			if(!anagrama(p1, p2)){
-				mensaje.innerText = `Las palabras '${palabra1.value}' y '${palabra2.value}' no resultan en un anagrama`;
-				//Se hace un 'timeout' para borrar el mensaje de resultado después de 2,5 segundos.
-				setTimeout(limpiarMensaje, 2500);
+				mostrarMensaje('mensajeRojo', `Las palabras '${palabra1.value}' y '${palabra2.value}' no resultan en un anagrama`);
 			} else {
-				mensaje.innerText = `Las palabras '${palabra1.value}' y '${palabra2.value}' sí forman un anagrama`;
-				setTimeout(limpiarMensaje, 2500);
+				mostrarMensaje('mensajeVerde', `Las palabras '${palabra1.value}' y '${palabra2.value}' sí forman un anagrama`);
 			}
 		} else {
-			mensaje.innerText = "No es anagrama porque no tienen la misma cantidad de letras";
-			setTimeout(limpiarMensaje, 2500);
+			mostrarMensaje('mensajeRojo', 'No es anagrama porque no tienen la misma cantidad de letras');
 		}
 	}
 
 	//Se llama a la función para limpiar los dos inputs.
-	limpiar();
+	limpiarInputs();
 }
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++*/
