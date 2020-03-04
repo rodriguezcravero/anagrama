@@ -10,7 +10,9 @@ Resolución: transformar 2 strings en arrays, ordenarlos, y compararlos elemento
 Alcance del programa
 ```
 Mobile responsive
-Funciones básicas de JS para validar cantidad de letras, inputs vacíos, igualdad de palabras, y código para hacer dinámico el programa.
+Funciones básicas de JS para: 
+  -validar cantidad de letras, inputs vacíos e igualdad de palabras;
+  -código para hacer dinámica la interacción del usuario.
 ```
 
 [Link al juego](https://rodriguezcravero.github.io/anagrama/)
